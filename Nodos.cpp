@@ -6,10 +6,45 @@ using namespace std;
 
 struct nodo{
 	int valor;
-	struct nodo *puntero;
+	struct nodo *puntero=NULL;
 };
 int main(){
 	struct nodo dato1, dato2, dato3, dato4, dato5;
+	struct nodo *inicio;
+	struct nodo *auxiliar;
+	inicio=NULL;
+	
+		auxiliar=new nodo();
+	auxiliar->valor=5;
+	auxiliar->puntero=NULL;
+	
+	inicio=auxiliar;
+	
+	auxiliar=new nodo();
+	auxiliar->valor=7;
+	auxiliar->puntero=NULL;
+	inicio->puntero;
+	
+	auxiliar=new nodo();
+	auxiliar->valor=5;
+	auxiliar->puntero=NULL;
+	inicio->puntero->puntero;
+	
+	auxiliar=new nodo();
+	auxiliar->valor=10;
+	auxiliar->puntero=NULL;
+	inicio->puntero->puntero->puntero;
+	
+	auxiliar=new nodo();
+	auxiliar->valor=8;
+	auxiliar->puntero=NULL;
+	inicio->puntero->puntero->puntero->puntero;
+	
+	auxiliar=new nodo();
+	auxiliar->valor=2;
+	auxiliar->puntero=NULL;
+	inicio->puntero->puntero->puntero->puntero->puntero;
+	
     dato1.valor=3;
     dato1.puntero=NULL;
     dato2.valor=7;
@@ -33,6 +68,12 @@ int main(){
 	cout<<dato1.puntero->puntero->valor<<endl;
 	cout<<dato1.puntero->puntero->puntero->valor<<endl;
 	cout<<dato1.puntero->puntero->puntero->puntero->valor<<endl;
+	
+	cout<<inicio->valor<<endl;
+	cout<<inicio->puntero->valor<<endl;
+	cout<<inicio->puntero->puntero->valor<<endl;
+	cout<<inicio->puntero->puntero->puntero->valor<<endl;
+	cout<<inicio->puntero->puntero->puntero->puntero->valor<<endl;
 }
 
 
